@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Code Mania</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.2.min.js"></script>
+        <link rel="stylesheet" href="css/my_css.css" />
+    <style>
+        
+        body .ui-body-c
+        {
+            font-family:"Roboto-Black";
+            font-size:200%;
+        }
+    
+            #firstxt
+               {
+                min-height:100px;
+                max-height:100px;
+                width: 90%;
+                overflow: auto;
+                background:url(./img/levelButton1.png);
+                background-size:100%;
+                padding:0px 20px 0px 40px;
+                left: -17px;
+                font-style:italic;
+                position: relative;
+                text-align:justify;
+                font-weight:bold;
+                font-family:"Avenir Black";
+                color:#6d6d6d;
+               }
+    
+            #secondtxt{
+                min-height: 150px;
+                max-height: 320px;
+                overflow: auto;
+                width: 90%;
+                background:url(./img/levelButton1.png);
+                background-size:100%;
+                left:-17px;
+                position: relative;
+                top:10px;
+                text-align:justify;
+                padding:0px 20px 0px 40px;
+                font-family:"Avenir Black";
+                color:#6d6d6d;
+
+            }
+            #content h2{
+                width: 84%;
+               /* text-align: center;*/
+                /*background: rgb(255, 0, 0);*/
+                text-shadow: none;
+                background:url(./img/levelButton1.png);
+                background-size:100% 100%;
+                overflow:auto;
+                min-height:50px;
+                max-height:120px;
+                text-align:justify;
+                font-weight:bold;
+                padding-left:35px;
+                padding-right:20px;
+                left:-17px;
+                position:relative;
+               font-family:"Avenir Black";
+               font-style:italic;
+               font-size:18px;
+               color:#6d6d6d;
+            }
+            #groipfieldcontain{
+                width: 98%;
+                left:-14px;
+                position:relative;
+                }
+            #btn_next{
+                position: absolute;
+                right: 20px;
+                width: 20px;
+                border:none;
+                Background:none;
+                background:url(./img/next.png)no-repeat center top;
+                background-size:90% 100%;
+
+            }
+            #btn_prev
+            {
+                
+                position: absolute;
+                left: 20px;
+                width: 20px;
+                border:none;
+                Background:none;
+                background:url(./img/previous.png)no-repeat center top;
+                background-size:90% 100%;
+
+
+            }
+            #btn_sub{
+                position: absolute;
+                left: -35px;
+                width: 40%;
+                border:none;
+                Background:none;
+                background:url(./img/quiz.png)no-repeat center top;
+                background-size:100% 100%;
+
+                    }
+            .btn-div{
+                display: block;
+                    }
+            .btn-lft{
+                width: 62%;
+                float: left;
+                    }
+            .btn-right{
+                width: 62%;
+                float: right;
+                    }
+            .ui-field-contain .ui-controlgroup-controls{
+                width: 100%;
+                    }
+             #levelsImages{
+                background:url(./img/levelButton.png) no-repeat center top;
+                background-size:100% 100%;
+                text-align:center;
+                height:30px;
+                 position:relative;
+                font-family:"Avenir Black";
+                font-style:italic;
+                font-size:22px;
+                color:#6d6d6d;
+                   }
+             #listid li a
+              {
+                  padding-left:37px;
+                  background:url(./img/levelButton.png) no-repeat center top;
+                background-size:100% 100%;
+              }
+             #header_control
+             {
+             position:relative;
+             height:60px;
+             background:none;
+             width:100%;
+             }
+            #header_btn
+             {
+             position:absolute;
+             top:20px;
+             font-family:"Avenir Black";
+             font-style:italic;
+             font-size:14px;
+
+             }
+            #headerTxt
+            {
+                top:16px;
+                font-family:"Avenir Black";
+                font-style:italic;
+                font-size:22px;
+                position:relative;
+                color:#434343;}
+        .quizBack
+        {
+        font-family:"Avenir Black";
+        font-style:italic;
+        font-size:14px;
+        position:absolute; top:20px;
+        }
+        #quizAnswer
+        {
+            Background:none;
+            background:url(./img/correct.png);background-size:100% 100%;"
+            font-style:italic;
+            font-size:14px;
+            color:#434343;
+            font-family:"Avenir Black";
+            padding-left:45px;
+        }
+    #scorePage
+        {
+        top:10px;
+        height:200px;
+        width:100%;
+        background:url(./img/levelButton.png);background-size:100% 100%;"
+
+    }
+    </style>
+  </head>
+    
+<body>
+  <!-- Page1 -->
+        <div data-role="page" id="firstPage" style=" background:url(./img/home.jpg) no-repeat center top;background-size:100% 100%;">
+            <div data-role="header" id="header_control">
+                <h1 id="headerTxt" >Code Mania</h1>
+            </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <a href="#secondPage" data-role="none" data-transition="slide" style="text-decoration:none;position:absolute; top:220px; left:41px; height:80px; width:233px; background:none;" >&nbsp;</a>
+       </div>
+       </div>
+<!-- Page1 End -->
+<!-- Page2 -->
+        <div data-role="page" id="secondPage" style=" background:url(./img/bck.jpg) no-repeat center top;background-size:100% 100%;" >
+            <div data-role="header" id="header_control"  >
+                <h1 id="headerTxt">Challenges</h1>
+                <a href="#" data-rel="back" data-transition="slide" data-direction="reverse" id="header_btn">Back</a>
+            </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <ul data-role="listview"  style="position:absolute; top:125px; width:80%; right:48px; ">
+                <li style="text-decoration:none;"><a href="#thirdPage" data-parm="11" data-role="none" data-transition="slide" id="levelsImages" >Beginner Level</a></li>
+                <li><a href="#thirdPage" data-parm="22" data-role="none" data-transition="slide" id="levelsImages" >Medium Level</a></li>
+                <li><a href="#thirdPage" data-parm="33" data-role="none" data-transition="slide" id="levelsImages" >Advance Level</a></li>
+            </ul>
+        </div>
+      </div>
+<!-- Page2 End -->
+<!-- Page 3 -->
+    <div data-role="page" id="thirdPage" class="thirdPage" style=" background:url(./img/bck.jpg); background-size:100% 100%;">
+        <div data-role="header" id="header_control" >
+        <h1 id="headerTxt">Intro Level</h1>
+        <a href="#" data-rel="back" data-transition="slide" data-direction="reverse" id="header_btn" >Back</a>
+        <a href="#sixthPage" data-role="none" data-transition="slide" class="ui-btn ui-btn-right " id="header_btn" data-parm="">Quiz</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content">
+        <ul data-role="listview" id="listid" ></ul>
+        </div><!-- /content -->
+        <div id="paramId" data-extParam=""></div>
+        
+        </div>
+<!-- Page3 End-->
+<!-- Page4 -->
+   <div data-role="page" id="fourthPage"  style=" background:url(./img/bck.jpg) no-repeat center top;background-size:100% 100%;"  >
+     <div data-role="header" id="header_control" >
+            <a href="#" data-rel="back" data-transition="slide" data-direction="reverse"  id="header_btn">Back</a>
+            <h1 id="headerTxt" style="text-align:right;">Intro Level</h1>
+      </div>
+    <div data-role="main" class="ui-content" >
+        <div id="firstxt" >
+            <p id="question" ></p>
+        </div></br>
+    <div id="secondtxt" >
+            <p id="door"></p>
+    </div>
+   </div>
+  </div>
+<!-- Page4 End -->
+<!-- page 5 -->
+    <div data-role="page" id="fifthPage">
+        <div data-role="header">
+            <h1>Quiz</h1>
+        </div><!-- /header -->
+    <div role="main" class="ui-content">
+       <ul data-role="listview">
+        <li><a href="#sixthPage" data-role="none" data-transition="slide" style="text-align:center;">Start Quiz!</a></li>
+        </ul>
+    </div>
+    </div>
+<!-- Page5 End -->
+
+
+
+<!-- Page 6 -->
+   <div data-role="page" id="sixthPage" style=" background:url(./img/bck.jpg) no-repeat center top;background-size:100% 73%;">
+   <div data-role="header" id="header_control">
+   <h1 id="headerTxt">Quiz</h1>
+   <a href="#" data-rel="back" id="btn-back" data-transition="slide" data-direction="reverse" class="quizBack">Back</a>
+    </div><!-- /header -->
+      <div role="main" class="ui-content" id = "content" style="background:none;  height:690px; width:320px" ></div>
+      <div id="paramIds" data-extParam=""></div>
+   </div>
+<!--Page6 End -->
+
+</body>
+<script>
+   /* document.ontouchmove = function(event)
+    {
+        event.preventDefault();
+    }*/
+//Spliting questions and answers from json Data--------------------------------------------------------->//
+    $("#secondPage a").on("click", function (event)
+    {
+        var parm = $(this).attr("data-parm");
+        $('#paramId').attr( 'data-extParam',parm);
+        $('#header_btn').attr('data-parm',parm);
+
+    });
+       
+    $(document).on('click', '#listid li a', function()
+    {
+        $('#fourthPage #question').text($(this).children('span').text());
+        $('#fourthPage #door').text($(this).children('p').text());
+        $.mobile.changePage("#fourthPage" , {transition:'slide'});
+    });
+
+
+
+//QUIZ SECTION START HERE------------------------------------------------------------------------------->//
+
+var arr_quiz = new Array();
+var current = 0;
+
+    $("#thirdPage").on("pageshow", function onPageShow(event,data){ // Fetching Josn question and answers Data from three different Sources//
+        if (event.handled !== true){
+            var jsonFileName;
+        if($('#paramId').attr( 'data-extParam') == "11"){
+            jsonFileName = "json/details.json";}
+        if($('#paramId').attr( 'data-extParam') == "22"){
+            jsonFileName = "json/details2.json";}
+        if($('#paramId').attr( 'data-extParam') == "33"){
+            jsonFileName = "json/details3.json";}
+                      
+  
+
+    $.getJSON(jsonFileName,function(data)
+          {
+            var html="";
+            $.each(data.quiz, function(key, value){
+            $.each(value, function(key, value){
+            html+= '<li class="quiz"><a href=""  data-role="none"><span style="   color:#6d6d6d; font-style:italic; font-family:"Avenir Black";">'+value.question+' </span><p>'+value.answer+'</p></a></li>';})})
+            $("#listid").html(html).trigger('create')})
+                       
+            .done(function(){
+            $("#listid").listview().listview("refresh");});
+              
+                       
+            var quizFileNames = "";
+            if($('#paramId').attr( 'data-extParam') == "11"){
+            quizFileNames = "json/quiz.json";}
+            if($('#paramId').attr( 'data-extParam') == "22"){
+            quizFileNames = "json/quiz2.json";}
+            if($('#paramId').attr( 'data-extParam') == "33"){
+            quizFileNames = "json/quiz3.json";}
+                     
+                       arr_quiz = new Array();
+                       current = 0;
+                       score = 0;
+                       
+            $.getJSON(quizFileNames, function (data)
+            {
+            var html = "";
+                      $.each(data.questions, function (key, value) {
+            $.each(value, function (key, value) {
+        if (key == "question")
+           html = '<h2>' + value + '</h2><div data-role="fieldcontain" id="groipfieldcontain"><fieldset data-role="controlgroup">';
+        if (key == "answers") {
+           var arraylist = value;
+           $.each(arraylist, function (key, value) {
+           key++;
+           html += '<input type="radio" name="quizMasterAnswer" id="' + key + '" value="' + key + '" onClick="checkRadio()"/><label id="quizAnswer" for="' + key + '" data-iconpos="right">' + value + '</label>';})}
+        if (key == "correct")
+           html += '<input type="hidden" name="correct"  id="correct_' + value + '" value="' + value + '"><input type="hidden" name="answer" id="answer_' + value + '" value="">';})
+        html += '</fieldset></div><div class="btn-div"><a href="" class="ui-btn  btn-lft" id="btn_prev" data-role="button" data-transition="slide" >&nbsp; </a><a href="" class="ui-btn btn-lft" id="btn_sub" data-role="button" data-transition="slide" style="text-align:center;margin-left:40%; width:100px; color:#6d6d6d; font-style:italic; font-family:"Avenir Black";">Submit</a><a href="" class="ui-btn  btn-right" id="btn_next" data-role="button" data-transition="slide" > &nbsp;</a></div></br> </br><div class="" id="resultdisplay" style=""></div>';
+        arr_quiz.push(html);})})
+        .done(function (){});
+         event.handled = true;}});
+        
+    
+    $(document).on('pageshow', '#sixthPage', function (event) {
+        if (event.handled !== true) {
+        $("#content").html(arr_quiz[0]);
+        $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+        event.handled = true;
+                   
+        /*setTimeout(function () {
+         $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+         }, 100);*/
+                   
+        }
+        return false;
+    });
+    
+//--------------------------------Previous Button--------------------------------------------------------------//
+    $(document).on("click", "#btn_prev", function (event){
+        if (event.handled !== true){
+        if(current > 0){
+            current--;
+            $("#content").html(arr_quiz[current]) ;
+            $("#content").trigger('create');
+            $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+            }
+            event.handled = true;
+            }
+            return false;
+    })
+    
+    
+    
+//----------------------------------Next Button--------------------------------------------------------------//
+    $(document).on("click", "#btn_next", function (event){
+            if (event.handled !== true)
+                   {
+            
+            if(current < arr_quiz.length-1){
+            current++;
+            //alert(current)
+            $("#content").html(arr_quiz[current]) ;
+            $("#content").trigger('create');
+            $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+            }
+            event.handled = true;
+            }
+            return false;})
+        
+//------------------------------------ Submit Button-----------------------------------------------------------//
+        $(document).on("click", "#btn_sub", function(event)
+                   {
+            if(event.handled !== true)
+                   {
+            if($("input[name='answer']").val() == ""){
+            var checked = $("input[type=radio]:checked");
+            if(checked.length === 0) {
+            window.alert("Please  slelect answer !");
+            return false;
+            }
+            var ans =  $('input[type="radio"]:checked').val();
+            $("input[name='answer']").val(ans)
+            arr_quiz[current] = $("#content").html() ;
+                   //$("#content").html(arr_quiz[current]) ;
+           if(checked.val() == $("input[name='correct']").val()){
+              score+=10;}
+                   
+           if (current == arr_quiz.length-1)
+            {
+           $("#content").html('You have completed this quiz. You have scored '+score+'/ '+parseInt(arr_quiz.length*10)+', <a href="#" data-rel="back" id="header_btn" data-transition="slide" data-direction="reverse" class="quizBack">Back</a>.</p>') ;
+                   
+              score = 0;
+              current = 0;
+                } else
+                       {
+                       if(current < arr_quiz.length-1){
+                       current++;
+                       //alert(current)
+                       $("#content").html(arr_quiz[current]) ;
+                       $("#content").trigger('create');
+                       $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+                       }
+                       }
+                       }
+                else{
+                       alert("You have already answered .. !")
+                       
+                       if(current < arr_quiz.length-1){
+                       current++;
+                       //alert(current)
+                       $("#content").html(arr_quiz[current]) ;
+                       $("#content").trigger('create');
+                       $("input[type='radio']").checkboxradio().checkboxradio("refresh");
+                       }
+            
+                       }
+                       
+                      
+                       
+            event.handled = true;}
+            return false;})
+//-----------------------------------Submit Button-----------------------------------------------------------//
+                                                                                                                 
+    $(document).on("change", "input[type='radio']", function (event) {
+            if (event.handled !== true) {
+            $(this).attr('checked',true).checkboxradio("refresh");
+            event.handled = true;
+            }
+            return false;
+    })
+ </script>
+</html>

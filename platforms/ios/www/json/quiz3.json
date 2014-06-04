@@ -1,0 +1,22 @@
+{
+    "questions":[
+                 {"question":"What is Mac OS?",
+                 "answers":["Car is a Car Car is a Car Car is a Car Car is a Car ","Fairies","Boring Science","Kittens"],
+                 "correct":2},
+                 {"question":"Why is Tata?",
+                 "answers":["Magic","Fur","Meow","More Kittens!"],
+                 "correct":3},
+                 {"question":"Why is the sky blue?",
+                 "answers":["Unicorns","Fairies","Boring Science","Kittens"],
+                 "correct":1},
+                 {"question":"Why are Inida?",
+                 "answers":["Magic","Fur","Meow","More Kittens!"],
+                 "correct":3},
+                 {"question":"Why are Sri Lanka?",
+                 "answers":["Magic","Fur","Meow","More Kittens!"],
+                 "correct":3},
+                 {"question":"Why are Kerala?",
+                 "answers":["Magic","Fur","Meow","More Kittens!"],
+                 "correct":3}
+                 ]
+}

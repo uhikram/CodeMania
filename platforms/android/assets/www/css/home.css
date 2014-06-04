@@ -1,0 +1,25 @@
+#home 
+{
+    background: blue;
+}
+
+.UITableView 
+{
+    background: #fff;
+}  
+
+.UITableView .view-right-text 
+{
+    position: absolute;
+    float: right;
+    right: 10px;
+    top: 6px;
+    height: 30px;
+    line-height: 30px;
+    color: #6b81a8;
+    text-align: right;
+    padding: 0 5px;
+    font-size: 18px;  
+    font-weight: normal; 
+    border
+}

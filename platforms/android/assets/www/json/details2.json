@@ -1,0 +1,21 @@
+{
+    "quiz": {
+        "ObjectiveC": [
+                    {"question":"What is iOS?", "answer":"iOS is an iPhone Operating System, which is used to developep mobile applications"},
+                    {"question":"Maxima", "answer":"Six Doors"},
+                    {"question":"Imran",  "answer":"Kanpur UP"},
+                    {"question":"Rijwan",  "answer":"Kanpur UP"},
+                    {"question":"Salman",  "answer":"Harbaspur UP"},
+                       {"question":"Maxima", "answer":"Six Doors"},
+                       {"question":"Imran",  "answer":"Kanpur UP"},
+                       {"question":"Rijwan",  "answer":"Kanpur UP"},
+                       {"question":"Salman",  "answer":"Harbaspur UP"},
+                       {"question":"Maxima", "answer":"Six Doors"},
+                       {"question":"Imran",  "answer":"Kanpur UP"},
+                       {"question":"Rijwan",  "answer":"Kanpur UP"},
+                       {"question":"Salman",  "answer":"Harbaspur UP"},
+                    {"question":"Rahil Ali",  "answer":"Jahanbad UP"}
+                       ]
+        
+    }
+}

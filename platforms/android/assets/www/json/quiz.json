@@ -1,0 +1,11 @@
+{
+    "questions":[
+                 {"question":"What is OS ? please explain how the operation of the controls and development perspective ? give the solid answer for it?",
+                 "answers":["  a Car Car is a Car xplain how the operation of the controls and development perspective ? ","Fairies","Boring Science","Kittens"],
+                 "correct":2},
+                 {"question":"Why is Tata?",
+                 "answers":["Magic Magic Magic Magic Magic Magic Magic Magic Magic Magic Magic Magic","Fur","Meow","More Kittens!"],
+                 "correct":3}
+                 
+                 ]
+}
